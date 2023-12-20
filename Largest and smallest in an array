@@ -1,0 +1,25 @@
+# include <stdio.h>
+int main()
+{
+    int a[100],n,i,big,sl;
+    printf("Enetr the limit if the array:");
+    scanf("%d",&n);
+    printf("\nEnter the elements of the array:");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    a[0]=big;
+    sl=0;
+    for(i=0;i<n;i++)
+    {
+        if(a[i]>big)
+        {
+            sl=big;
+            big=a[i];
+        }
+    }
+    printf("\nLargest is:%d",big);
+    printf("\nSecond largest is:%d",sl);
+    return 0;
+}
