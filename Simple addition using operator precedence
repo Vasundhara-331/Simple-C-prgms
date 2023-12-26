@@ -1,0 +1,8 @@
+# include <stdio.h>
+int main()
+{
+    int a=7,b=5,c=15,d=2,e=3,s=0;
+    s=a*(b+c)/(d*b)-e;
+    printf("Result is: %d",s);
+    return 0;
+}
