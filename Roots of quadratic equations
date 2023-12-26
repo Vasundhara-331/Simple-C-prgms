@@ -1,0 +1,44 @@
+# include <stdio.h>
+# include <math.h>
+int main()
+{
+    int a,b,c,d;
+    float r1,r2;
+    printf("Enter the coefficients: ");
+    printf("\na: ");
+    scanf("%d",&a);
+    printf("\nb: ");
+    scanf("%d",&b);
+    printf("\nc: ");
+    scanf("%d",&c);
+    if(a==0)
+    printf("\nQuadratic equation not possible!!");
+    d=b*b-(4*a*c);
+    printf("\nValue of discriminant is: %d",d);
+    switch(d>0)
+    {
+        case 1:
+        r1=(float)(-b+sqrt(d))/2*a;
+        r2=(float)(-b-sqrt(d))/2*a;
+        printf("\nRoots are: %0.2f\t%0.2f",r1,r2);
+        break;
+        
+        case 0:
+            switch(d<0)
+           {
+             case 1:
+             r1=(float)-b/2*a;
+             r2=sqrt(d)/2*a;
+             printf("\nRoots are: %0.2f + i%0.2f and %0.2f - i%0.2f",r1,r2,r1,r2);
+             break;
+             
+             
+            case 0:
+
+            r1=(float)-b/2*a;
+            printf("\nRoot is: %0.2f",r1);
+            break;  
+           }
+    }
+    return 0;
+}
