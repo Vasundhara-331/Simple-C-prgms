@@ -1,0 +1,19 @@
+# include <stdio.h>
+void swap( int *, int *);
+int main()
+{
+    int a=3, b=4;
+    printf("a and b before: %d and %d",a,b);
+    swap(&a,&b);
+    printf("\na and b after: %d and %d",a,b);
+    return 0;
+}
+void swap(int *m, int *n)
+{
+    int t;
+    printf("\nm and n after: %d and %d",*m,*n);
+    t=*m;
+    *m=*n;
+    *n=t;
+    printf("\nm and n after: %d and %d",*m,*n);
+}
