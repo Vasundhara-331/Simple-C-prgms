@@ -1,0 +1,20 @@
+# include <stdio.h>
+int main()
+{
+    int a=5, *p;
+    p = &a;
+    printf("a=%d",a);
+    printf("\nAddress of a=%p",&a);
+    printf("\nValue of a using p=%d",*p);
+    printf("\nAddress of a using p=%p",p);
+    return 0;
+}
+
+
+/*
+SAMPLE OUTPUT
+a=5
+Address of a=0x7ffc2db4fb2c
+Value of a using p=5
+Address of a using p=0x7ffc2db4fb2c
+*/
